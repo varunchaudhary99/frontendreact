@@ -11,13 +11,13 @@ import Details from './pages/Details'
 import { Provider } from 'react-redux'
 import store  from "./components/store"
 import CartDetails from './cart/cartdetails';
-
-
+import Login  from './components/login'
+import Register from './components/register'
 function App() {
   return (
 <Provider store={store}>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
         <Route path='/men' element={<Men />} />
         <Route path='/women' element={<Women />} />
         <Route path='/kids' element={<Kids />} />
@@ -25,6 +25,8 @@ function App() {
         <Route path='/living' element={<Living />} />
         <Route path='/details' element={<Details />} />
         <Route path='/CartDetails' element={<CartDetails />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Register />} />
       </Routes>
     </Provider>
   );

@@ -13,7 +13,7 @@ function IconList({ product }) {
   };
 
   const handleShoppingBagProduct = () => {
-    dispatch(addToCart({ id: product.id, title: product.name, price: product.price ,quantity:1}));
+    dispatch(addToCart({ id: product.id, title: product.name, price: product.price,image: product.image ,quantity:1}));
     alert('Added to cart!');
   };
 
@@ -31,7 +31,7 @@ function IconList({ product }) {
         </li>
       </Link>
 
-      <Link onClick={handleShoppingBagProduct} to="/CartDetails">
+      <Link onClick={handleShoppingBagProduct} to="/CartPage">
         <li className="icon">
           <span className="fas fa-shopping-bag"></span>
         </li>
